@@ -82,6 +82,7 @@ envtool -n venv
 
 echo "Done!"
 
+mkdir assets/
 echo "Setup is complete now activate the virtual environment"
 
 echo "Type this command : source venv/bin/activate"
