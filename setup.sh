@@ -1,30 +1,73 @@
 #!/bin/bash
 
-# Ensure the script is run with superuser privileges
-if [ "$(id -u)" -ne "0" ]; then
-    echo "This script must be run as root" 1>&2
-    exit 1
-fi
+# Script for setting up the environment for your project
 
-# Update package list and install required packages
-apt-get update
-apt-get install -y python3 python3-venv python3-pip curl
+echo "Starting setup..."
 
-# Create and activate a Python virtual environment
-python3 -m venv venv
-source venv/bin/activate
+# 1. Download ngrok
+echo "Downloading ngrok..."
+curl -s https://bin.equinox.io/c/4b8e4a0e39f0/ngrok-stable-linux-amd64.zip -o ngrok.zip
+unzip ngrok.zip
+rm ngrok.zip
 
-# Install necessary Python packages
-pip install flask flask-socketio
+# 2. Create ngrok multi-tunneling configuration
+echo "Creating ngrok multi-tunneling configuration..."
 
-# Install Node.js
-curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
-apt-get install -y nodejs
+mkdir -p ~/.ngrok
+cat > ~/.ngrok/ngrok.yml <<EOL
+tunnels:
+  flask:
+    addr: 5000
+    proto: http
+  nodejs:
+    addr: 3000
+    proto: http
+EOL
 
-# Install ngrok
-curl -s https://ngrok.com/download | tar xvz -C /usr/local/bin
+# 3. ngrok API key generation doc
+echo "For ngrok API key generation, follow these steps:"
+echo "1. Sign up or log in to ngrok at https://dashboard.ngrok.com"
+echo "2. Go to the Auth section to get your API key."
+echo "3. Replace <YOUR_NGROK_API_KEY> below with your actual API key."
 
-# Install Node.js dependencies
+# 4. Add ngrok API key
+echo "Adding ngrok API key..."
+read -p "Enter your ngrok API key: " NGROK_API_KEY
+./ngrok authtoken $NGROK_API_KEY
+
+# 5. Install Node.js
+echo "Installing Node.js..."
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+# 6. Node.js setup
+echo "Setting up Node.js..."
 npm install
 
+# installing git
+sudo apt install git
+
+# Installing envtool
+echo "Installing envtool..."
+
+git clone https://github.com/ky13-troj/envtool.git
+
+cd envtool
+
+chmod +x run.sh
+
+./run.sh
+
+cd ../
+
+# setting up python environment
+
+echo "Setting up python environment..."
+envtool -n venv
+
+echo "Done!"
+
+echo "Setup is complete now activate the virtual environment"
+
+echo "Type this command : source venv/bin/activate"
 
