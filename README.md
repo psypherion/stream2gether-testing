@@ -1,5 +1,5 @@
 # Stream2Gether
-
+![stream2gether](stream2gether.jpeg)
 Stream2Gether is a web application designed to let users watch videos together with friends remotely. While there are existing solutions like Rave, they often lack support for Linux or do not provide the features I wanted. Stream2Gether aims to bridge this gap by offering a simple and functional platform for video watching.
 
 ## Why Stream2Gether?
