@@ -1,21 +1,35 @@
 # Stream2Gether
 
-Stream2Gether is a collaborative streaming platform that allows users to create and join rooms to watch videos together. This project includes features like multi-tunneling with ngrok, a Node.js server, and a Python Flask backend.
+Stream2Gether is a web application designed to let users watch videos together with friends remotely. While there are existing solutions like Rave, they often lack support for Linux or do not provide the features I wanted. Stream2Gether aims to bridge this gap by offering a simple and functional platform for video watching.
+
+## Why Stream2Gether?
+Pirating movies has often been my go-to for watching films, whether through Stremio, Telegram, or torrent sites. However, sharing these experiences with friends who are far away has always been a challenge. Existing software like Rave, which allows for synchronized watching, is not available on Linux, which I use extensively. Additionally, uploading videos to Google Drive for sharing is cumbersome and time-consuming.
+
+Stream2Gether was created to address these issues, offering a more seamless way to enjoy videos together, right from your Linux environment.
+
 
 ## Features
 
-- Multi-room video streaming with ngrok tunneling
-- Real-time chat functionality
-- Node.js server integration
-- Python Flask backend
+- Watch videos together.
+- Real-time chat functionality.
+- Host videos directly from your local computer.
+- User can also download the video from the room.
 
+## Future Updates
+
+- **Video Calling Feature:** Integrate video calling for a more interactive experience.
+- **Improved UI:** Enhance the user interface for better aesthetics and usability.
+- **Voice Calling:** Add voice communication capabilities.
+- **Cloud Server Integration:** Implement cloud server support for smoother video sharing.
+- **Synchronized Video Playback:** Syncing video in the room
+- 
 ## Prerequisites
 
 - **Git:** To clone the repository.
 - **ngrok:** For tunneling and exposing local servers to the internet.
 - **Node.js:** JavaScript runtime for running the Node.js server.
 - **Python 3:** For the Flask backend.
-- **envtool:** For managing Python virtual environments.
+- **envtool:** For managing Python virtual environments. (A tool made by me to handle python environments)
 (Dont Worry every thing will be handled using a bash script)
 
 ## Setup
