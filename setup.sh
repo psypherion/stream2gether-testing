@@ -24,6 +24,8 @@ tunnels:
     proto: http
 EOL
 
+sudo apt-get install jq
+
 # 3. ngrok API key generation doc
 echo "For ngrok API key generation, follow these steps:"
 echo "1. Sign up or log in to ngrok at https://dashboard.ngrok.com"
@@ -34,6 +36,19 @@ echo "3. Replace <YOUR_NGROK_API_KEY> below with your actual API key."
 echo "Adding ngrok API key..."
 read -p "Enter your ngrok API key: " NGROK_API_KEY
 ./ngrok authtoken $NGROK_API_KEY
+
+
+# Create credentials.json if it doesn't exist and add the API key
+echo "Creating credentials.json with the API key..."
+CREDENTIALS_FILE="credentials.json"
+if [ ! -f "$CREDENTIALS_FILE" ]; then
+    echo "{}" > $CREDENTIALS_FILE
+fi
+
+# Add ngrok API key to credentials.json
+jq --arg key "$NGROK_API_KEY" '.api_key = $key' $CREDENTIALS_FILE > tmp.$$.json && mv tmp.$$.json $CREDENTIALS_FILE
+
+echo "API key added to credentials.json"
 
 # 5. Install Node.js
 echo "Installing Node.js..."
