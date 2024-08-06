@@ -22,7 +22,7 @@ Stream2Gether was created to address these issues, offering a more seamless way 
 - **Voice Calling:** Add voice communication capabilities.
 - **Cloud Server Integration:** Implement cloud server support for smoother video sharing.
 - **Synchronized Video Playback:** Syncing video in the room
-- 
+
 ## Prerequisites
 
 - **Git:** To clone the repository.
@@ -70,8 +70,23 @@ sudo bash run.sh
 
 ### ngrok
 
+#### Steps to acquire the ngrok API key : 
+1.Visit the [NGROK](https://ngrok.com/)
+   ![Screenshot from 2024-08-06 16-02-43](https://github.com/user-attachments/assets/8be190e6-dfe8-46bc-996d-b66569702259)
+2. Login/Sign Up with your credentials.
+  ![Screenshot from 2024-08-06 16-03-49](https://github.com/user-attachments/assets/9cf187dc-2943-49b9-810a-4308c79f76c3)
+3. Navigate to [API](https://dashboard.ngrok.com/api) section
+  ![Screenshot from 2024-08-06 16-06-09](https://github.com/user-attachments/assets/199dbf2c-e40b-4977-86d2-94d7a52c351a)
+4. Click the [Add API Key](https://dashboard.ngrok.com/api/new)
+  ![image](https://github.com/user-attachments/assets/d0762451-f589-440f-992e-a58293d05232)
+5. After this You'll get to copy the API key
+  ![image](https://github.com/user-attachments/assets/d95d0819-72b5-4ef7-a9be-e80dd91995cd)
+**!!!Caution!!!*** 
+You'll get to copy the API Key once and only this time. So, copy and save it somewhere safe.
+
+____
 1. **Download ngrok:** The setup script will handle this step.
-2. **API Key:** You will be prompted to enter your ngrok API key during the setup process. If you need to generate a new API key, sign up or log in at [ngrok Dashboard](https://dashboard.ngrok.com) and navigate to the Auth section.
+2. **API Key:** You will be prompted to enter your ngrok API key during the setup process. 
 3. **Multi-Tunneling:** The setup script configures ngrok for both Flask and Node.js tunnels.
 
 ### `credentials.json`
