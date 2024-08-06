@@ -97,3 +97,4 @@ For any questions or issues, please contact the project maintainer:
 
 - **Email:** williamskyle562@gmail.com
 - **GitHub:** [ky13-troj](https://github.com/ky13-troj)
+- **Discord:** [stream2gether Server](https://discord.gg/cT3wXCYZ)
