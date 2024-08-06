@@ -129,7 +129,7 @@ If you encounter issues such as ports already being in use, check that no other 
 
 ## License
 
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the  Apache License. See the LICENSE file for details.
 
 ## Contact
 
