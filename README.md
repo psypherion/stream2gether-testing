@@ -72,27 +72,37 @@ sudo bash run.sh
 
 #### Steps to acquire the ngrok API key : 
 1.Visit the [NGROK](https://ngrok.com/)
+___
+
    ![Screenshot from 2024-08-06 16-02-43](https://github.com/user-attachments/assets/8be190e6-dfe8-46bc-996d-b66569702259)
 
 ___
 
 2. Login/Sign Up with your credentials.
+ ___
+
   ![Screenshot from 2024-08-06 16-03-49](https://github.com/user-attachments/assets/9cf187dc-2943-49b9-810a-4308c79f76c3)
 
 ___
 
 3. Navigate to [API](https://dashboard.ngrok.com/api) section
+ ___
+
   ![Screenshot from 2024-08-06 16-06-09](https://github.com/user-attachments/assets/199dbf2c-e40b-4977-86d2-94d7a52c351a)
 
 ___
 
 4. Click the [Add API Key](https://dashboard.ngrok.com/api/new)
+   ___
+
   ![image](https://github.com/user-attachments/assets/d0762451-f589-440f-992e-a58293d05232)
 
 
 ___
 
 5. After this You'll get to copy the API key
+   ___
+
   ![image](https://github.com/user-attachments/assets/d95d0819-72b5-4ef7-a9be-e80dd91995cd)
 
 ___
