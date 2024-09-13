@@ -87,3 +87,6 @@ echo "Setup is complete now activate the virtual environment"
 
 echo "Type this command : source venv/bin/activate"
 
+# setting up nodejs environment
+npm init
+npm install express socket.io
